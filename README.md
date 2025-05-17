@@ -71,7 +71,7 @@ Para utilizar a ferramenta, execute as células do notebook Google Colab na orde
 **Nota sobre Privacidade e Exemplos:**
 Para preservar a identidade das pessoas e a confidencialidade do conteúdo técnico discutido nas reuniões 1:1 reais, o nome do "liderado" foi generalizado nas discussões e nos exemplos. Para facilitar os testes e demonstrar o funcionamento da ferramenta, disponibilizamos simulações de anotações de 1:1. Estas anotações são baseadas em cenários reais, mas foram adaptadas para serem genéricas.
 
-* **Acesse os exemplos de anotações aqui:** `[https://docs.google.com/document/d/1UMd1lqlvB_VWfW442obW0yjD3tlMt_7U55sxntLA3ho/edit?usp=sharing](https://drive.google.com/drive/folders/1Z4A8K_9qjmarNMOiQHyZDl7-Wi55vsd-?usp=drive_link)` 
+* **Acesse os exemplos de anotações aqui:** `(https://drive.google.com/drive/folders/1Z4A8K_9qjmarNMOiQHyZDl7-Wi55vsd-?usp=drive_link)` 
 
 O código foi projetado para funcionar com outros arquivos de anotações, desde que o formato de entrada (ID do Google Docs) seja respeitado.
 
