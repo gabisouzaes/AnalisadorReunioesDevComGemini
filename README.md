@@ -26,9 +26,10 @@ Analisar manualmente múltiplas anotações de reuniões para identificar padrõ
 
 * **Linguagem:** Python 3
 * **Ambiente Principal:** Google Colab
-* **APIs Google:**
-    * Google Gemini API (via `google-generativeai`)
-    * Google Docs API (via `google-api-python-client`)
+* **APIs e Modelos de IA Google:**
+    * **Google Gemini API (para execução do script):** Utilizada via biblioteca `google-generativeai` para analisar o conteúdo das reuniões.
+    * **Google Docs API:** Utilizada via biblioteca `google-api-python-client` para ler as anotações.
+    * **Google Gemini (para desenvolvimento do projeto):** A versão Gemini (incluindo interações com modelos como o Gemini Pro) foi extensivamente utilizada como ferramenta de assistência durante a construção deste código, fornecendo sugestões, explicações detalhadas sobre trechos de código e auxiliando na depuração.
 * **Principais Bibliotecas Python:**
     * `os`
     * `json`
@@ -51,6 +52,7 @@ Para executar este projeto, siga os passos abaixo:
     * Ao executar o script pela primeira vez, o Colab solicitará permissão para acessar seus arquivos do Google Docs. Siga as instruções do pop-up para autenticar sua conta Google.
 
 ## 🚀 Guia de Uso Rápido
+
 Para utilizar a ferramenta, execute as células do notebook Google Colab na ordem em que aparecem. As principais etapas são:
 
 1.  **Instalação de Dependências e Importações:** As primeiras células cuidam da instalação das bibliotecas Python necessárias e das importações de módulos.
@@ -69,25 +71,9 @@ Para utilizar a ferramenta, execute as células do notebook Google Colab na orde
     * **Resultado:** Os insights gerados pela IA serão exibidos na saída da célula.
 
 **Nota sobre Privacidade e Exemplos:**
-Para preservar a identidade das pessoas e a confidencialidade do conteúdo técnico discutido nas reuniões 1:1 reais, o nome do "liderado" foi generalizado nas discussões e nos exemplos. Para facilitar os testes e demonstrar o funcionamento da ferramenta, disponibilizamos simulações de anotações de 1:1. Estas anotações são baseadas em cenários reais, mas foram adaptadas para serem genéricas.
+Para preservar a identidade das pessoas e a confidencialidade do conteúdo técnico discutido nas reuniões 1:1 reais, as anotações de exemplo disponibilizadas para teste foram **totalmente criadas pela IA do Google Gemini**. Foi utilizado um prompt similar ao detalhado abaixo para gerar três simulações de registros de reuniões sequenciais:
 
-* **Acesse os exemplos de anotações aqui:** `(https://drive.google.com/drive/folders/1Z4A8K_9qjmarNMOiQHyZDl7-Wi55vsd-?usp=drive_link)` 
+"Crie três anotações resumidas de reuniões 1:1 sequenciais entre 'Líder' e 'Liderado', formatadas como registros de reuniões reais e prontas para cópia individual em Google Docs.
+O tema central é o desenvolvimento do 'Liderado' em Revenue Operations (RevOps) numa empresa SaaS"
 
-O código foi projetado para funcionar com outros arquivos de anotações, desde que o formato de entrada (ID do Google Docs) seja respeitado.
-
-## 📝 Prompt Base para Análise com Gemini
-
-O modelo Gemini é instruído com o seguinte prompt para realizar a análise:
-```text
-Você é uma assistente de IA com especialidade em identificar tendências de desenvolvimento em séries de conversas 1:1.
-As reuniões analisadas são entre {nome_da_lider} (líder técnica) e um de seus liderados.
-Interprete o conjunto de anotações de reuniões fornecido abaixo como um todo, refletindo a jornada de desenvolvimento deste liderado específico com {nome_da_lider}.
-
-Com base em todas as anotações fornecidas, elabore um resumo com suas percepções gerais sobre os pontos de desenvolvimento do liderado. Em seu resumo, procure destacar:
-
-* As principais áreas de foco para desenvolvimento (técnicas e comportamentais) que se mantiveram ao longo do tempo.
-* Evidências claras de progresso ou, alternativamente, áreas onde o desenvolvimento pareceu estagnado ou enfrentou dificuldades.
-* Desafios ou obstáculos que foram mencionados ou observados de forma recorrente.
-* De 1 a 3 recomendações principais ou próximos passos para o desenvolvimento futuro do liderado.
-
-Apresente suas percepções de forma clara, direta e concisa.
+Estas anotações geradas pela IA servem para demonstrar o funcionamento da ferramenta e são intencionalmente genéricas.Acesse os exemplos de anotações aqui: https://drive.google.com/drive/folders/1Z4A8K_9qjmarNMOiQHyZDl7-Wi55vsd-?usp=drive_link. O código foi projetado para funcionar com outros arquivos de anotações, desde que o formato de entrada (ID do Google Docs) seja respeitado.
